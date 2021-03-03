@@ -14,9 +14,8 @@
 
   <h2>Responsive Web Design</h2>
   <h3>Applied Visual Design</h3>
-
   <section class="graphic-css">
-    <h4>Create a Graphic Using CSS</h4>
+    <h4>Create Graphics Using CSS</h4>
     <div id=moon-shape>
       <h5>MoonShape</h5>
     </div>
@@ -39,11 +38,12 @@
     </code>
   </pre>
     </div>
+    <hr>
     <div class="heart">
       <h5 id="heart-text">Heart</h5>
     </div>
     <div id="heart-code">
-      <pre id="heart-code">
+      <pre>
       <code>
         .heart {
           position: absolute;
@@ -78,9 +78,62 @@
           left: 0px;
         }
       </code>
-    </pre>
+      </pre>
     </div>
-
+    <hr>
+<section class="animation-css">
+  <h4>Create Animations Using CSS</h4>
+  <h5>refresh page for following animation</h5>
+  <div id=rainbow>
+    <h5>rainbow</h5>
+  </div>
+  <div id="rainbow-code">
+    <pre>
+      <code>
+        #rainbow {
+          animation-name: rainbow;
+          animation-duration: 4s;
+          animation-iteration-count: 10;
+        }
+      
+        @keyframes rainbow {
+          0% {
+            background-color: blue;
+          }
+          50% {
+            background-color: green;
+          }
+          100% {
+            background-color: yellow;
+          }
+        }
+      </code>
+    </pre>
+  </div>
+  <hr>
+  <div class="button-color">
+    <button id="color-change">HOVER ON ME</button>
+    <div id="color-change-code">
+      <pre>
+        <code>
+          #color-change:hover {
+            animation-name: background-color;
+            animation-duration: 500ms;
+            /* have it say color while hover */
+            animation-fill-mode: forwards;
+          }
+          @keyframes background-color {
+            100% {
+              background-color: #EC13A3;
+            }
+          }
+        </code>
+      </pre>
+    </div>
+  </div>
+  
+  
+</section>
 
 </body>
 

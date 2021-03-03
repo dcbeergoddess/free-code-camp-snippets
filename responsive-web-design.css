@@ -1,3 +1,4 @@
+/* CREATE A MOON SHAPE */
 #moon-shape {
   position: absolute;
   margin: auto;
@@ -11,7 +12,7 @@
   border-radius: 50%;
   box-shadow: 25px 10px 0 0 blue;
 }
-
+/* CREATE A HEART */
 .heart {
   position: absolute;
   margin: auto;
@@ -44,3 +45,48 @@
   top: -25px;
   left: 0px;
 }
+/* HAVE GRAPHIC CHANGE COLOR */
+  #rainbow {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rainbow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    /* continue graphic, still don't know how to make it continuous */
+    animation-iteration-count: 10;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+/* CHANGE BUTTON COLOR ON HOVER */
+  #color-change {
+    border-radius: 5px;
+    color: #57A879;
+    background-color: #A85786;
+    padding: 5px 10px 8px 10px;
+  }
+  #color-change:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* have it say color while hover */
+    animation-fill-mode: forwards;
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #EC13A3;
+    }
+  }
