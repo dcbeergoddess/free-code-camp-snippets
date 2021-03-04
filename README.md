@@ -699,4 +699,44 @@ To illustrate, the animation on the below consists of two stars that each decrea
 - Heading with equal or higher rank start new implied sections, heading with lower rank start subsections of the previous one
 - As an example, a page with an `h2` element followed by several subsections labeled with `h4` tags would confuse a screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you can use CSS to edit the relative sizing.
 - EACH PAGE SHOULD HAVE ONE AND ONLY ONE `h1`
+* **Jump Straight to the Content Using the main Element**
+- HTML5 introduces new elements for developers while also incorporating accessibility features
+- `main || header || footer || nav || article || section` : among others all equal to a `div` but adds semantic meaning 
+* `main` : wrap the main content, only one per page, surround info related to the main content of the page || Do not include items that repeat across pages (navs, banners, etc.)
+- tag also has embedded landmark feature that assistive technology can use to quickly navigate to the main content "Jump to Main Content" link at the top fo the page give assistive devices tha functionality 
+* `article` : a sectioning element || used to wrap independent, self-contained content || works well with blog entries, forum posts, or new articles
+- Will content hold up in RSS feed? If all surrounding content was removed would it make sense
+- NOTE: `section` vs. `article` || grouping thematically related content vs. standalone content, if no relationship use a div
+- `<div>` - groups content
+- `<section>` - groups related content 
+- `<article>` - groups independent, self-contained content
+* `header`: intro information or nav links for it's parent tag works well for content that's repeated across pages 
+* `nav`: embedded landmark feature for easy screen reader like others | mean to wrap around main navigation links of your page
+* `footer`: primary used for copyright information or links to related documents | can use for repeated links at bottom of page
+#### Accessibility and Audio
+* Improve Accessibility fo Audio Content with the audio Element
+- `audio`: gives semantic meaning when it wraps sound or audio stream content in your markup | needs alternative text to be accessible to people who are deaf or hard of hearing - can be done with nearby text on the page or a link to a transcript
+- supports the `controls` attribute: shows the browser default play, pause, and other controls, and supports keyboard functionality. this is `boolean` attribute, does not need a value, it's presence on the tag turns the setting on
+```html
+  <audio id="meowClip" controls>
+      <source src="audio/meow.mp3" type="audio/mpeg"/>
+      <source src="audio/meow.ogg" type="audio.ogg"/>
+  </audio>
+  <!-- Note: Multimedia content usually has both visual and auditory components. It needs synchronized captions and a transcript so users with visual and/or auditory impairments can access it. Generally, a web developer is not responsible for creating the captions or transcript, but needs to know to include them. -->
 
+    <body>
+    <header>
+      <h1>Real Coding Ninjas</h1>
+    </header>
+    <main>
+      <p>A sound clip of Zersiax's screen reader in action.
+        <audio controls>
+          <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg"/>
+        </audio>
+      </p>
+
+
+
+        </main>
+      </body>
+```
