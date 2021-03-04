@@ -671,3 +671,32 @@ To illustrate, the animation on the below consists of two stars that each decrea
 <div class="balls" id="blue"></div>
 <div class="balls" id="green"></div>
   ```
+
+  ## Applied Accessibility
+
+  - `alt` attribute: add a text alternative to images for visually impaired accessibility || helps when image fails to load, etc. || also used by search engines to to understand what an image contains ot include it in search results.
+  - **Screen Readers:** Convert web content to an audio interface - won't get info if it's only presented visually
+  - per HTML5 it is now considered mandatory
+  - NO `alt` attribute: images grouped with caption already describing them or decoration only, set to empty string `alt=""` || for images with a caption you may still want to include `alt` for the search engines 
+  ```html
+  <!-- Camper Cat has coded a skeleton page for the blog part of his website. He's planning to add a visual break between his two articles with a decorative image of a samurai sword. Add an alt attribute to the img tag and set it to an empty string. (Note that the image src doesn't link to an actual file - don't worry that there are no swords showing in the display.) -->
+    <h1>Deep Thoughts with Master Camper Cat</h1>
+    <article>
+      <h2>Defeating your Foe: the Red Dot is Ours!</h2>
+      <p>To Come...</p>
+    </article>
+
+    <img src="samuraiSwords.jpeg" alt="">
+
+    <article>
+      <h2>Is Chuck Norris a Cat Person?</h2>
+      <p>To Come...</p>
+    </article>
+  ```
+* Use Headings to Show Hierarchical Relationships of Content
+- Important for header tags to have semantic meaning and not just used for size - Screen Readers can be set to only read headings so user gets summary
+- __Semantic meaning__ means that the tag you use around content indicates the type of information it contains || Sort of like writing a paper where you have a hierarchical relationship of content (intro, body, conclusion)
+- Heading with equal or higher rank start new implied sections, heading with lower rank start subsections of the previous one
+- As an example, a page with an `h2` element followed by several subsections labeled with `h4` tags would confuse a screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you can use CSS to edit the relative sizing.
+- EACH PAGE SHOULD HAVE ONE AND ONLY ONE `h1`
+
