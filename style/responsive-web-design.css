@@ -2,9 +2,9 @@
 #moon-shape {
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 325px;
   right: 0;
-  bottom: 325px;
+  bottom: 0;
   left: 0;
   width: 100px;
   height: 100px;
@@ -16,7 +16,7 @@
 .heart {
   position: absolute;
   margin: auto;
-  top: 500px;
+  top: 1000px;
   right: 0;
   bottom: 0;
   left: 0;
