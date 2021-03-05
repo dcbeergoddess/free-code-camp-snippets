@@ -8,21 +8,38 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
   integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/accessibility.css">
+  <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
   <header>
-    
-    <ul>
-      <li><a href="responsive-web-design.html">Back to Graphics Page</a></li>
-      <li><a href="https://github.com/dcbeergoddess/free-code-camp-snippets/blob/main/pages/accessibility.html" target="_blank">Github Repo: Yarn Project Page Code</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-sm sticky-top">
+      <div class="container-fluid">
+        <a href="../index.html" class="navbar-brand">Free Code Camp Snippets</a>
+        <!-- toggle button -->
+        <!-- need to connect with data target to collapse and data toggle same as id of items to be toggles -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme" aria-controls="#expandme"
+          aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="expandme">
+          <div class="navbar-nav">
+            <a href="https://rachel-michel-murray.herokuapp.com/" class="nav-item nav-link active" target="_blank">About Me</a>
+            <a href="../pages/responsive-web-design.html" class="nav-item nav-link">Responsive Web Design</a>
+            <a href="../pages/accessibility.html" class="nav-item nav-link">Yarn Project Page with Accessibility Best
+              Practices</a>
+            <a href="#" class="nav-item nav-link disabled">More Coming Soon..</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
+
   <main class="yarnProjects">
     <h1>Yarn Projects</h1>
     <section class="crochet">
-      <h3>Crochet</h3>
+      <h2>Crochet</h2>
       <div id="crochet-1">
-          <h4>Rubber Duck Decoding</h4>
+          <h3>Rubber Duck Decoding</h3>
           <img src="../assets/duck.png" alt="crocheted rubber duck">
           <table>
             <thead>`
@@ -47,9 +64,9 @@
       </div>
     </section>
     <section class="knit">
-      <h3>Knit</h3>
+      <h2>Knit</h2>
       <div id="knit-1">
-        <h4>Baby Cardigan</h4>
+        <h3>Baby Cardigan</h3>
         <img src="../assets/bear.jpg" alt="stuffed bear wearing cardigan">
         <table>
           <thead>
@@ -75,7 +92,7 @@
     </section>
   </main>
   
-  <footer>&copy; 2021 Rachel Designs</footer>
+  <footer>&copy; 2021 dcHook&&coderDesigns</footer>
   
     <!-- JQUERY, POPPER.js, BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

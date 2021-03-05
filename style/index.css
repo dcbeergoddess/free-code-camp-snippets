@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(100deg, #5FA094, #745FA0, #A05F6B, #8BA05F)
+}
+nav {
+  background: #213834;
+}
+
+nav a {
+  color: #c5abfd;
+}
+
+nav a:hover {
+  color: #7d48ee
+}
+
+h1, p {
+  text-align: center;
+  color: #571a25;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 600;
+}
+h1 {
+  font-size: 80px;
+}
+
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#welcome {
+  background: transparent;
+}
