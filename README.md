@@ -1,6 +1,13 @@
-# Responsive Design Notes & Code Snippets
+# FREE CODE CAMP SNIPPETS
 
-## Text-Transform Properties
+Collection of code I want to store and document for future reference. Website used and playground to use code and store snippets of fun graphics and anything else that comes along during the challenges at [Free Code Camp](freecodecamp.org).
+
+[SNIPPETS WEBSITE LINK](https://dcbeergoddess.github.io/free-code-camp-snippets/)
+![Screen Shot of Home Page](https://user-images.githubusercontent.com/59098488/110186857-80b08680-7de4-11eb-90da-60a3cacd32d3.png)
+
+
+## Responsive Design Notes & Code Snippets
+### Text-Transform Properties
 
 Value - Result
 `lowercase` -	"transform me"
@@ -10,7 +17,7 @@ Value - Result
 `inherit` -	Use the text-transform value from the parent element
 `none` -	Default: Use the original text
 
-## Applied Visual Design
+### Applied Visual Design
 * **Complementary Colors:** Color theory and the impact on design
 * [Color Wheel and Color Theory: Canva](https://www.canva.com/colors/color-wheel/)
 ![Color Wheel](color-wheel.jpg)
