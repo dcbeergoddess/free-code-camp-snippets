@@ -1,8 +1,8 @@
 /* CREATE A MOON SHAPE */
 #moon-shape {
-  position: absolute;
+  /* position: absolute; */
   margin: auto;
-  top: 325px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -14,9 +14,10 @@
 }
 /* CREATE A HEART */
 .heart {
-  position: absolute;
+  /* position: absolute; */
   margin: auto;
-  top: 1000px;
+  margin-top: 2em;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -78,6 +79,8 @@
     color: #57A879;
     background-color: #A85786;
     padding: 5px 10px 8px 10px;
+    margin-top: 2em;
+    margin-left: 6em;
   }
   #color-change:hover {
     animation-name: background-color;
@@ -89,4 +92,17 @@
     100% {
       background-color: #EC13A3;
     }
+  }
+
+  .card {
+    background-color: wheat;
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  }
+
+  .card-title {
+    margin-top: 2em;
+  }
+  #rainbow-title {
+    margin-top: 0;
   }

@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(100deg, #5FA094, #745FA0, #A05F6B, #8BA05F)
+  background: linear-gradient(100deg, #5FA094, #745FA0, #A05F6B, #8BA05F);
+  font-family: 'Roboto Condensed', sans-serif;
 }
 nav {
   background: #213834;
@@ -20,14 +21,22 @@ h1, p {
 
 p {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
+  margin: 0 200px 0 200px;
+  line-height: 1.5em;
 }
 h1 {
   font-size: 80px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
 
 footer {
-  position: sticky;
+  position: bottom;
   height: 100px;
   bottom: 0;
   width: 100%;
@@ -44,4 +53,9 @@ footer {
   margin-right: auto;
   width: 300px;
   border-radius: 5px;
+}
+
+#welcome-text {
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
