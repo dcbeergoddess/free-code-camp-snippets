@@ -747,3 +747,180 @@ To illustrate, the animation on the below consists of two stars that each decrea
         </main>
       </body>
 ```
+### Accessibility and Charts, Forms
+* `figure` : introduced by HTML5, along with `figcaption` || Used together to wrap a visual representation (img, diagram, chart) along with it's caption
+- semantically grouping related content and provides text alternative that explains the `figure`
+- For data visualizations like charts, the caption can be used to briefly note the trends or conclusions for users with visual impairments
+```html
+  <figure>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+  <br>
+  <figcaption>
+    Master Camper Cat demonstrates proper form of a roundhouse kick.
+  </figcaption>
+</figure>
+
+<!-- CHALLENGE -->
+      <!-- Only change code below this line -->
+      <figure>
+        <!-- Stacked bar chart will go here -->
+        <br>
+        <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
+      </figure>
+      <!-- Only change code above this line -->
+```
+
+* Improving accessibility with semantic HTML markup applies to using BOTH 1. appropriate tag names as well as 2. attributes
+
+* **Forms and Attributes**
+
+* `label` : wraps the text for a specific *form control item* | Usually a `name` or label for a choice. 
+* `for` : attribute on a `label` | associates the `label` with the *form control* and is used by *screen readers*
+* The value of `for` must = the value of `id` on the *form control*
+```html
+  <form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  </form>
+
+```
+* `fieldset` : radio buttons | surrounds teh entire group of radio buttons - semantically show they are part of a set | use `legend` tag to provide description for the grouping, which is read by *screen readers* for each choice in the fieldset element 
+- `fieldset` and `legend` are not necessary when choices are self-explanatory, like a gender selection - using `label` and `for` for each radio button is sufficient
+```html
+  <form>
+  <fieldset>
+    <legend>Choose one of these three items:</legend>
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice Two</label><br>
+    <input id="three" type="radio" name="items" value="three">
+    <label for="three">Choice Three</label>
+  </fieldset>
+</form>
+
+<!-- ANOTHER EXAMPLE -->
+    <fieldset>
+    <legend>What level ninja are you?</legend>
+    <input id="newbie" type="radio" name="levels" value="newbie">
+    <label for="newbie">Newbie Kitten</label><br>
+    <input id="intermediate" type="radio" name="levels" value="intermediate">
+    <label for="intermediate">Developing Student</label><br>
+    <input id="master" type="radio" name="levels" value="master">
+    <label for="master">Master</label>
+    </fieldset>
+```
+* **ACCESSIBLE DATE PICKER** : HTML5 --> option to specify `date` in the `type` attribute 
+- For older browsers, the type will default to `text`, so it helps to show users the expected date format in the `label` or `placeholder` text just in case.
+```html
+  <label for="input1">Enter a date:</label>
+  <input type="date" id="input1" name="input1">
+
+  <!-- ANOTHER EXAMPLE -->
+        <form>
+        <p>Tell us the best date for the competition</p>
+        <label for="pickdate">Preferred Date:</label>
+        <input type="date" id="pickdate" name="date">
+        <input type="submit" name="submit" value="Submit">
+      </form>
+```
+
+* `time` and `datetime`: attributes to standardize times | *inline element* that can wrap a date or time on a page. A valid format of that date is hed b the `datetime` 
+```html
+<p>Master Camper Cat officiated the cage match between Goro and Scorpion <time datetime="2013-02-13">last Wednesday</time>, which ended in a draw.</p>
+<!-- Another Example -->
+<p>Posted by: Sub-Zero on <time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time></p>
+```
+### Using Custom CSS - Visible only to Screen Reader
+
+- visually hide content meant only for screen readers
+- happens when information is in a visual format (like a chart), but *screen readers* users need an alternative presentation (like a table) to access the data
+- CSS used to position the *screen reader-only* elements off the visual area of the browser window.
+```css
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+/* The Following CSS approaches WILL NOTdo the same thing: */
+table {
+  display: none;
+  /* or */
+  visibility: hidden;
+}
+
+/* Zero Values for pixel sizes removes element from flow of document and screen readers will ignore it */
+
+table {
+  width: 0px;
+  height: 0px;
+}
+```
+### Improve Readability with High Contrast Text
+- **Web Content Accessibility Guidelines (WCAG)** recommend at least a 4.5 to 1 contrast ratio for normal text
+- **Sufficient Contrast** improves readability of your content 
+- ratio calculated by comparing the relative luminance values of two colors
+- 1:1 = same color/no contrast || 21:1 = white against black
+- Many contrast checking tools available online
+- **Colorblindness and Sufficient Contrast:** Foreground and background colors need sufficient contrast so colorblind users can distinguish them
+- In practice, the 4.5:1 contrast ratio can by reached by *shading* (adding black to) the darker color and *tinting* (adding white to) the lighter color.
+- *dark* = blues, violets, magentas, and reds
+- *lighter* = oranges, yellow, greens, and blue-greens
+```css
+/* Camper Cat is experimenting with using color for his blog text and background, but his current combination of a greenish background-color with maroon text color has a 2.5:1 contrast ratio. You can easily adjust the lightness of the colors since he declared them using the CSS hsl() property (which stands for hue, saturation, lightness) by changing the third argument. Increase the background-color lightness value from 35% to 55%, and decrease the color lightness value from 20% to 15%. This improves the contrast to 5.9:1.
+ */
+   body {
+    color: hsl(0, 55%, 20%);
+    background-color: hsl(120, 25%, 35%);
+  }
+
+/* CHANGE TO */
+
+  body {
+    color: hsl(0, 55%, 15%);
+    background-color: hsl(120, 25%, 55%);
+  }
+```
+* *Colorblindness Issues*: carefully choosing colors that convey information
+* _There are various forms of colorblindness. These can range from a reduced sensitivity to a certain wavelength of light to the inability to see color at all. The most common form is a reduced sensitivity to detect greens._
+- Avoid close colors (i.e. neighbors on the color wheel) when conveying important information
+- _Note: Some online color picking tools include visual simulations of how colors appear for different types of colorblindness. These are great resources in addition to online contrast checking calculators._
+```html
+<!-- EXAMPLE -->
+<!-- Camper Cat is testing different styles for an important button, but the yellow (#FFFF33) background-color and the green (#33FF33) text color are neighboring hues on the color wheel and virtually indistinguishable for some colorblind users. (Their similar lightness also fails the contrast ratio check). Change the text color to a dark blue (#003366) to solve both problems. -->
+<!-- +++++++++++BEFORE+++++++++++++++++++++ -->
+
+<head>
+  <style>
+  button {
+    color: #33FF33;
+    background-color: #FFFF33;
+    font-size: 14px;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Danger!</h1>
+  </header>
+  <button>Delete Internet</button>
+</body>
+
+<!-- +++++++++++AFTER+++++++++++++++++++++ -->
+  <style>
+  button {
+    color: #33FF33;
+    background-color: #FFFF33;
+    font-size: 14px;
+    padding: 10px;
+  }
+  </style>
+
+
+```
+
+
