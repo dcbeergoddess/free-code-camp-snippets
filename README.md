@@ -919,8 +919,73 @@ table {
     padding: 10px;
   }
   </style>
+```
+
+### LINKS/ANCHOR TAGS and ACCESSIBILITY
+- give links meaning by using descriptive link text
+- *screen readers* have different options for what type of content their device reads || includes skipping to (or over) landmark elements ==> jump to main content, only hear links available on page
+- *screen readers* read text between the `a` tags - You should use brief but descriptive text || NOT JUST "click me" or "read more"
+```html
+  <!-- BADBADBADBADBADBADBADBAD -->
+      <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. <a href="">Click here</a> for information about batteries</p>
+  <!-- GOODGOODGOODGOODGOODGOODGOOD-->
+      <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for <a href="">information about batteries</a></p>
+```
+- `accesskey`: Make links navigable with **HTML Access Keys** || specify shortcut key to activate or bring focus to an element - navigation more efficient fo keyboard-users 
+- allowed on any element - particularly useful for interactive ones (links, buttons, form controls)
+```html
+<button accesskey="b">Important Button</button>
+<!-- or -->
+    <h2><a id="first" href="#" accesskey= "g">The Garfield Files: Lasagna as Training Fuel?</a></h2>
+    <h2><a id="second" href="#" accesskey="c">Is Chuck Norris a Cat Person?</a></h2>
+
+```
+* `tabindex`: add keyboard focus to an element || 3 DISTINCT FUNCTIONS relating to an element's keyboard focus - when on tag, indicated element can be focused on - The VALUE (an integer that's positive, negative, or zero) determines the behavior.
+- links and form controls - automatically receive keyboard focus when a user tabs through a page | order they appear in the HTML source makeup
+- give `div`, `span`, and `p` elements same functionality by placing `tabindex="0"` attribute on them
+```html
+<div tabindex="0">I need keyboard focus!</div>
+<!-- or -->
+<!-- Camper Cat created a new survey to collect information about his users. He knows input fields automatically get keyboard focus, but he wants to make sure his keyboard users pause at the instructions while tabbing through the items. Add a tabindex attribute to the p tag and set its value to 0. Bonus - using tabindex also enables the CSS pseudo-class :focus to work on the p tag. -->
+
+  <style>
+  p:focus {
+    background-color: yellow;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ninja Survey</h1>
+  </header>
+  <section>
+    <form>
+
+
+      <p tabindex="0">Instructions: Fill in ALL your information then click <b>Submit</b></p>
 
 
 ```
+- _Note: A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a pop-up window is activated), and is beyond the scope of these challenges._
 
+* `tabindex`: specify order of keyboard focus for several items
+- set `tabindex="1"`: Bring focus to that element first then cycles through sequence of specified `tabindex` values before moving to the default `tabindex="0"` items
+- Take care before applying it - may confuse users who expect to start navigation from the top of the page
+```html
+  <div tabindex="1">I get keyboard focus, and I get it first!</div>
+
+  <div tabindex="2">I get keyboard focus, and I get it second!</div>  
+
+  <!-- or -->
+  <!-- Camper Cat has a search field on his Inspirational Quotes page that he plans to position in the upper right corner with CSS. He wants the search input and submit input form controls to be the first two items in the tab order. Add a tabindex attribute set to 1 to the search input, and a tabindex attribute set to 2 to the submit input. -->
+    <form>
+    <label for="search">Search:</label>
+
+
+    <input tabindex="1" type="search" name="search" id="search">
+    <input tabindex="2" type="submit" name="submit" value="Submit" id="submit">
+
+
+  </form>
+```
 
