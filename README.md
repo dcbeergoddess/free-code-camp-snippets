@@ -989,3 +989,63 @@ table {
   </form>
 ```
 
+### Responsive Web Design Principles
+#### Media Query
+- Change the presentation of content based on different viewpoint sizes
+- Media query that returns the content when the device's width is less than or equal to 100px: `@media (max-width: 100px) {/* CSS Rules */}`
+- Media query returns the content when the device's height is more than or equal to 350px: `@media (min-height: 350px) {/* CSS Rules */}`
+- Add a media query, so that the p tag has a font-size of 10px when the device's height is less than or equal to 800px.
+```css
+    p {
+    font-size: 20px;
+  }
+
+  @media (max-height: 800px) {
+    p {
+      font-size: 10px
+    }
+  }
+```
+#### Make Image Responsive
+- The `max-width` of `100%` will make sure the image is never wider thn the container it is in, and the `height` of `auto` will make the image keep it's original aspect ratio.
+```css
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+```
+#### Retina Image for Higher Resolution Displays
+- Pixel density is an aspect that could be different on one device from others
+- density - **Pixel Per Inch (PPI)** or **Dots Per Inch(DPI)** 
+- **Retina Display** most famous such display - latest MacBook Pro, etc | Some images that have not been made with a High-Res Display in mind could look "pixelated"  when rendered on High-Resolution display.
+- MAKE IMAGES PROPERLY appear on High-Res = define their `width` and `height` values as only half of what the original file is:
+```html
+  <style>
+  img { height: 250px; width: 250px; }
+  </style>
+  <img src="coolPic500x500" alt="A most excellent picture">
+```
+
+#### Make Typography Responsive
+- INSTEAD OF Using `em` or `px` to size text ----> USE **viewport units** for responsive typography || are relative units and are relative to the viewport dimensions (width or height) of device vs **percentages** which are relative to the size of the parent container
+- FOUR DIFFERENT VIEWPORT UNITES
+1. `vw` (viewport width): `10vw` would be 10% of the viewport's width
+2. `vh` (viewport height): `3vh` would be 3& of viewport's height
+3. `vmin` (viewport minimum): `70vmin` would be 70% of the viewport's smaller dimension (height or width)
+4. `vmax` (viewport maximum): `100vmax` would be 100% of the viewport's bigger dimension (height or width)
+```css
+/* Set Body Tag to 30% of viewport's width */
+    body {
+      width: 30vw;
+    }
+/* Set the width of the h2 tag to 80% of the viewport's width and the width of the paragraph as 75% of the viewport's smaller dimension. */
+    h2 {
+      width: 80vw;
+    }
+    p {
+      width: 75vmin;
+    }
+```
+### CSS Flexbox
+- 
+
