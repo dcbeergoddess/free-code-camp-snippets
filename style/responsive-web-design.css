@@ -59,7 +59,7 @@
     animation-name: rainbow;
     animation-duration: 4s;
     /* continue graphic, still don't know how to make it continuous */
-    animation-iteration-count: 10;
+    animation-iteration-count: infinite;
   }
 
   @keyframes rainbow {
@@ -106,3 +106,4 @@
   #rainbow-title {
     margin-top: 0;
   }
+

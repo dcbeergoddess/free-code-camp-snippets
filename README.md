@@ -1047,5 +1047,30 @@ table {
     }
 ```
 ### CSS Flexbox
-- 
+- `display: flex`: CSS Property - allows you to use other flex properties to build a responsive page | turns element into a **flex container** = align any children of that element into rows or columns using `flex-direction`
+- Check out twitter/tweet example [TWEET CODE](pages/twitter.html)
+- `flex-direction`: set it to `row` (align children horizontally) or `column` (align children vertically)
+- More Options: `row-reverse` and `column-reverse`
+- DEFAULT PROPERTY = `row`
+#### Align Elements Using the `justify-content` Property
+![FlexBox Diagram](assets/flexbox-pic.png)
+- `row` - stacked left-to-right | horizontal | **main-axis** = horizontal line that cuts through each item
+- `column` - stacked top-to-bottom | vertical | **main-axis** = vertical line that cuts through the items
+##### Values for `justify-content`
+* `center`: aligns all flex items to the center inside the flex container
+* `flex-start`: align items to the start of the flex container | `row` = pushes items to left of container | `column` pushes items to top of container | DEFAULT alignment if no `justify-content` is specified
+* `flex-end`: align items to end of container | `row` = pushes items to right of container | `column` = pushes items to bottom of container
+* `space-between`: aligns item the center of the main axis, w/ extra space placed between items | 1st and Last items are pushed to the very edge of the flex container 
+* `space-around`: similar to `space-between` but 1st and Last items are not locked to edges of container | space distributed around all items with a half space on either end of teh flex container. 
+* `space-evenly`: distributes space evenly between the flex items with a full space either end of the flex container
 
+#### Align Elements Using the `align-items` Property
+- `align-items`: align flex items along the **cross axis** 
+- `row` **cross axis** = vertical | CSS push items in entire row up or down within a container 
+- `column` **cross-axis** = horizontal | push all items left or right within a container
+##### Values for `align-items`
+* `flex-start`: aligns items to start of flex container | `row` = top of container | `column` = left of container
+* `flex-end`: align items to end of container | `row` = bottom of container | `column` = right of the container
+* `center`: align items to center | `row` = vertically aligns items (equal space above and below items) | `column`: horizontally aligns items (equal space to the left and right of items)
+* `stretch`: stretch the items to fill the flex container | `row` = stretched to fill the flex container top-to-bottom | DEFAULT VALUE IF NO `align-items` value is specified 
+* `baseline`: align items to their baselines | baseline is a text concept --> line that the letters sit on
