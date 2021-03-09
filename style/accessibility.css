@@ -1,12 +1,22 @@
-img {
-  width: 300px;
+li.list-group-item {
+  background: #d67e8e;
+  padding: 5px;
 }
-
-section {
-  margin: 10px 10px 25px 10px;
-}
-
-.yarn-projects {
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
+.card {
+  background: #A05F6B;
+  margin-bottom: 10px;
+  border-radius: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+.desc {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
