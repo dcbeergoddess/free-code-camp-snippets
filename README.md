@@ -1088,4 +1088,52 @@ table {
 - takes numbers as values | higher number = more shrink compared to other items in the container
 - if one item as `flex-shrink: 1` and the other has `flex-shrink: 3`, the one with value of `3` will shrink 3x as much as the other
 #### Expand Items ==> `flex-grow`
-- `flex-grow`: opposite of `flex-shrink` | controls the size of items when the parent container expands 
+- `flex-grow`: opposite of `flex-shrink` | controls the size of items when the parent container expands
+-  if one item has a flex-grow value of 1 and the other has a flex-grow value of 3, the one with the value of 3 will grow three times as much as the other.
+#### Set Initial Size of Item ==> `flex-basis`
+- `flex-basis`: property specifies the initial size of an item before CSS makes adjustments with `flex-grow` or `flex-shrink`
+- Units used are the same as other size properties (`px`, `em`, `%`, etc.)
+#### USE FLEX SHORTHAND PROPERTY
+- `flex: 1 0 10px;` = `flex-grow: 1;`, `flex-shrink: 0;`, `flex-basis: 10px;`
+- DEFAULT SETTINGS: `flex: 0 1 auto;`
+```html
+<!-- Add the CSS property flex to both #box-1 and #box-2. Give #box-1 the values so its flex-grow is 2, its flex-shrink is 2, and its flex-basis is 150px. Give #box-2 the values so its flex-grow is 1, its flex-shrink is 1, and its flex-basis is 150px.
+
+These values will cause #box-1 to grow to fill the extra space at twice the rate of #box-2 when the container is greater than 300px and shrink at twice the rate of #box-2 when the container is less than 300px. 300px is the combined size of the flex-basis values of the two boxes.
+ -->
+
+    <style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    flex: 2 2 150px;
+    height: 200px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    flex: 1 1 150px;
+    height: 200px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+```
+#### Rearrange Items ==> `order`
+- `order`: property used to tell CSS the order of how flex items appear in the flex container
+- DEFAULT: items appear in the same order they come in the source HTML
+- property takes NUMBERS as VALUES, and NEGATIVE NUMBERS can be used
+#### `align-self` Property
+- `align-self`: allows you to adjust each item's alignment individually instead of setting them all at once
+- useful because common adjustment techniques using the CSS properties `float`, `clear`, and `vertical align` DO NOT WORK on flex tiems
+- accepts the same values as `align-items` and will override any value set by the `align-items` property
+
+
+
+
