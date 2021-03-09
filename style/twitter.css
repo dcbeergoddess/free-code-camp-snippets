@@ -5,7 +5,7 @@ body {
   margin-top: 25px;
   padding: 10px;
   border: 1px solid #A05F6B;
-  background: #dafa95;
+  background-color: #dafa95;
 }
 header {
   display: flex;
