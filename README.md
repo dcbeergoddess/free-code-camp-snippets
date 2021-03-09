@@ -1087,3 +1087,5 @@ table {
 - `flex-shrink` - property for flex items | allows item ot shrink if the flex container is too small | items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it
 - takes numbers as values | higher number = more shrink compared to other items in the container
 - if one item as `flex-shrink: 1` and the other has `flex-shrink: 3`, the one with value of `3` will shrink 3x as much as the other
+#### Expand Items ==> `flex-grow`
+- `flex-grow`: opposite of `flex-shrink` | controls the size of items when the parent container expands 
