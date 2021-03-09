@@ -74,6 +74,121 @@
     </div>
   </footer>
 </div>
+<div class="container">
+  <h2>CSS CODE</h2>
+  <pre>
+    <code>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        margin-top: 25px;
+        padding: 10px;
+        border: 1px solid #A05F6B;
+        background: #dafa95;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+      }
+      header .profile-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+      }
+      header .profile-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 10px;
+      }
+      header .follow-btn {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+      }
+      header .follow-btn button {
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      header h3, header h4 {
+        display: flex;
+        margin: 0;
+      }
+      #inner p {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      #inner hr {
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+      }
+      footer {
+        display: flex;
+        flex-direction: row;
+      }
+      footer .stats {
+        display: flex;
+        font-size: 15px;
+      }
+      footer .stats strong {
+        font-size: 18px;
+      }
+      footer .stats .likes {
+        margin-left: 10px;
+      }
+      footer .cta {
+        margin-left: auto;
+      }
+      footer .cta button {
+        border: 0;
+        background: transparent;
+      }
+      
+    </code>
+  </pre>
+  <h2>HTML CODE</h2>
+  <pre>
+    <code>
+      &#60div class="container"&#62
+        &#60header&#62
+          &#60img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture"
+            class="profile-thumbnail"&#62
+          &#60div class="profile-name"&#62
+            &#60h3&#62Quincy Larson&#60/h3&#62
+            &#60h4&#62@ossia&#60/h4&#62
+          &#60/div&#62
+          &#60div class="follow-btn"&#62
+            &#60button&#62Follow&#60/button&#62
+          &#60/div&#62
+        &#60/header&#62
+        &#60div id="inner"&#62
+          &#60p&#62I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
+            you still have to work hard.&#60/p&#62
+          &#60span class="date"&#621:32 PM - 12 Jan 2018&#60/span&#62
+          &#60hr&#62
+        &#60/div&#62
+        &#60footer&#62
+          &#60div class="stats"&#62
+            &#60div class="Retweets"&#62
+              &#60strong&#62107&#60/strong&#62 Retweets
+            &#60/div&#62
+            &#60div class="likes"&#62
+              &#60strong&#62431&#60/strong&#62 Likes
+            &#60/div&#62
+          &#60/div&#62
+          &#60div class="cta"&#62
+            &#60button class="share-btn"&#62Share&#60/button&#62
+            &#60button class="retweet-btn"&#62Retweet&#60/button&#62
+            &#60button class="like-btn"&#62Like&#60/button&#62
+          &#60/div&#62
+        &#60/footer&#62
+      &#60/div&#62      
+    </code>
+  </pre>
+</div>
 
   <!-- JQUERY, POPPER.js, BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -1074,3 +1074,16 @@ table {
 * `center`: align items to center | `row` = vertically aligns items (equal space above and below items) | `column`: horizontally aligns items (equal space to the left and right of items)
 * `stretch`: stretch the items to fill the flex container | `row` = stretched to fill the flex container top-to-bottom | DEFAULT VALUE IF NO `align-items` value is specified 
 * `baseline`: align items to their baselines | baseline is a text concept --> line that the letters sit on
+
+#### Wrap a row or column ==> `flex-wrap`
+- By DEFAULT --> flex container will fit all items together (i.e. row will all be on one line)
+- `flex-wrap`: tells CSS to wrap items ---> extra items move to new row or column --> the break point of where wrapping happens depends on size of the container
+- DIRECTION OF WRAP
+* `nowrap`: DEFAULT setting, and does not wrap items
+* `wrap`: wraps items onto multiple lines | `row` = top-to-bottom | `column` = left-to-right
+* `wrap-reverse`: wraps items onto multiple lines | `row` = bottom-to-top | `column` = right-to-left 
+
+#### Shrink Items ==> `flex-shrink`
+- `flex-shrink` - property for flex items | allows item ot shrink if the flex container is too small | items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it
+- takes numbers as values | higher number = more shrink compared to other items in the container
+- if one item as `flex-shrink: 1` and the other has `flex-shrink: 3`, the one with value of `3` will shrink 3x as much as the other
