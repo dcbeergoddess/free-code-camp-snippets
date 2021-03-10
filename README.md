@@ -1,8 +1,9 @@
 # FREE CODE CAMP SNIPPETS
 
-Collection of code I want to store and document for future reference. Website used and playground to use code and store snippets of fun graphics and anything else that comes along during the challenges at [Free Code Camp](freecodecamp.org).
+Collection of code I want to store and document for future reference. Also used as a playground to play with code and store snippets of fun graphics and anything else that comes along during the challenges at [Free Code Camp](freecodecamp.org). Also used to brainstorm ideas for bigger projects that will be created later down the road. 
 
 [SNIPPETS WEBSITE LINK](https://dcbeergoddess.github.io/free-code-camp-snippets/)
+<br>
 ![Screen Shot of Home Page](https://user-images.githubusercontent.com/59098488/110186857-80b08680-7de4-11eb-90da-60a3cacd32d3.png)
 
 
